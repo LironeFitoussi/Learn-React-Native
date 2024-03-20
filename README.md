@@ -1,16 +1,16 @@
-# React - The Complete Guide 2024
+# React Native - The Practical Guide [2024]
 
-This repository documents my progression through Maximilian Schwarzmüller's course on Udemy titled "React - The Complete Guide 2024 (incl. React Router & Redux)." The course covers a comprehensive range of topics related to React development, including React fundamentals, React Router, Redux, and more.
+This repository documents my progression through Maximilian Schwarzmüller's course on Udemy titled "React Native - The Practical Guide [2024]." The course provides practical, hands-on guidance for developing mobile applications using React Native.
 
 ## Course Information
 
-- **Course Title:** React - The Complete Guide 2024 (incl. React Router & Redux)
+- **Course Title:** React Native - The Practical Guide [2024]
 - **Instructor:** Maximilian Schwarzmüller
-- **Course Link:** [React - The Complete Guide 2024](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
+- **Course Link:** [React Native - The Practical Guide [2024]](https://www.udemy.com/course/react-native-the-practical-guide/)
 
 ## Description
 
-This repository serves as a documentation of my learning journey and progress as I work through the course materials provided by Maximilian Schwarzmüller. I aim to gain a solid understanding of React development concepts and techniques through hands-on practice and application.
+This repository serves as a documentation of my learning journey and progress as I work through the practical exercises and projects provided in Maximilian Schwarzmüller's React Native course. The course aims to equip learners with the skills and knowledge needed to build mobile applications using React Native framework effectively.
 
 ## Contents
 
