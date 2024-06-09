@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Android
+android/
+build/
+.gradle/
+local.properties
+
+# iOS
+ios/
+Pods/
+*.xcworkspace
+*.pbxproj
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.xcuserstate
+*.xcscmblueprint
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# React Native
+__tests__/
+jest.config.js
+metro.config.js
