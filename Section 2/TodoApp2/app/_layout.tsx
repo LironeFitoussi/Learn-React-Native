@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FlatList, StyleSheet, View } from "react-native";
+import { Button, FlatList, StyleSheet, View } from "react-native";
 
 // Components
 import GoalInput from "@/components/GoalInput";
@@ -11,7 +11,7 @@ export interface ICourseGoal {
 
 export default function HomeScreen() {
   const [courseGoals, setCourseGoals] = useState<ICourseGoal[]>([]);
-
+const [ isModalOpen, setIsModalOpen ] = useState(false)
   function addGoalHandler(enteredText: string) {
     console.log(enteredText);
 
@@ -30,7 +30,8 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.appContainer}>
-      <GoalInput onAddGoal={addGoalHandler} />
+      <Button title="Add New Goal" color="#5e0acc" onPress={() => setIsModalOpen(true)}/>
+      <GoalInput isModalOpen={isModalOpen} onAddGoal={addGoalHandler} onModalClose={() => setIsModalOpen(false)} />
       <View style={styles.goalsContainer}>
         <FlatList
           data={courseGoals}
