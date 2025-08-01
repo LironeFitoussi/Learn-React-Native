@@ -1,12 +1,11 @@
 {
   "expo": {
-    "name": "TodoApp2",
-    "slug": "TodoApp2",
+    "name": "Guess-The-Number",
+    "slug": "Guess-The-Number",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "backgroundColor": "#1e085a",
-    "scheme": "todoapp2",
+    "scheme": "guessthenumber",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -25,19 +24,16 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router",
       [
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#1e085a"
+          "backgroundColor": "#ffffff"
         }
       ]
     ],
-    "experiments": {
-      "typedRoutes": true
-    }
+    "experiments": {}
   }
 }
