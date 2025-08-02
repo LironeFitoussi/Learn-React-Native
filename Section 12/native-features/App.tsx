@@ -22,17 +22,9 @@ export default function App() {
           <Stack.Screen
             name="AllPlaces"
             component={AllPlaces}
-            options={({ navigation }) => ({
+            options={{
               title: "All Places",
-              headerRight: () => (
-                <IconButton
-                  icon="add"
-                  size={24}
-                  color="#007AFF"
-                  onPress={() => navigation.navigate("AddPlace")}
-                />
-              ),
-            })}
+            }}
           />
           <Stack.Screen
             name="AddPlace"
