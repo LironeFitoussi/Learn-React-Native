@@ -2,14 +2,14 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Pressable } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 
 // Screens
 import AllPlaces from "./screens/AllPlaces";
 import AddPlace from "./screens/AddPlace";
 import PlaceDetails from "./screens/PlaceDetails";
-import IconButton from "./components/ui/IconButton";
+
+// Constants
+import { Colors } from "./constants/colors";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,9 +18,19 @@ export default function App() {
     <>
       <StatusBar style="dark" />
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: Colors.primary500,
+            },
+            headerTintColor: Colors.gray700,
+            contentStyle: {
+              backgroundColor: Colors.gray700,
+            },
+          }}
+        >
           <Stack.Screen
-            name="AllPlaces"
+            name="Your Favorite Places"
             component={AllPlaces}
             options={{
               title: "All Places",
@@ -29,17 +39,9 @@ export default function App() {
           <Stack.Screen
             name="AddPlace"
             component={AddPlace}
-            options={({ navigation }) => ({
+            options={{
               title: "Add New Place",
-              headerRight: ({ tintColor }) => (
-                <IconButton
-                  icon="save"
-                  size={24}
-                  color={tintColor || "#fff"}
-                  onPress={() => {}}
-                />
-              ),
-            })}
+            }}
           />
           <Stack.Screen name="PlaceDetails" component={PlaceDetails} />
         </Stack.Navigator>

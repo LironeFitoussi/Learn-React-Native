@@ -8,7 +8,7 @@ interface PlaceItemProps {
 
 export default function PlaceItem({place, onSelect}: PlaceItemProps) {
     return (
-        <Pressable onPress={onSelect}>
+        <Pressable onPress={onSelect} style={styles.item}>
             <Image source={{ uri: place.imageUri }} />
             <View>
                 <Text>{place.title}</Text>
