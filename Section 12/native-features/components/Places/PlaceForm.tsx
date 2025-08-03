@@ -4,6 +4,7 @@ import { Colors } from "../../constants/colors";
 
 // Components
 import ImagePicker from "./ImagePicker";
+import LocationPicker from "./LocationPicker";
 
 export default function PlaceForm() {
     const [enteredTitle, setEnteredTitle] = useState("");
@@ -18,6 +19,7 @@ export default function PlaceForm() {
                 <TextInput style={styles.input} onChangeText={changeTitleHandler} value={enteredTitle}/>
             </View>
             <ImagePicker />
+            <LocationPicker />
         </ScrollView>
     )
 }
