@@ -1,4 +1,5 @@
-import { useFavorites } from "../store/context/favorites-context";
+// import { useFavorites } from "../store/context/favorites-context";
+import { useFavorites } from "../store/redux/favoritesSlice";
 import { MEALS } from "../data/dummy-data";
 import MealsList from "../components/MealsList";
 

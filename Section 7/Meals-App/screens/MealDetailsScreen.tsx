@@ -8,7 +8,8 @@ import MealDetails from "@/components/MealDetails";
 import Subtitle from "@/components/MealDetail/Subtitle";
 import List from "@/components/MealDetail/List";
 import IconButton from "@/components/IconButton";
-import { useFavorites } from "@/store/context/favorites-context";
+// import { useFavorites } from "@/store/context/favorites-context";
+import { useFavorites } from "@/store/redux/favoritesSlice";
 interface IMealDetailsScreenProps {
     route: RouteProp<RootStackParamList, 'MealDetails'>;
     navigation: NativeStackNavigationProp<RootStackParamList, 'MealDetails'>;
