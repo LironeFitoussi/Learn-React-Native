@@ -1,10 +1,12 @@
 import ExpensesOutput from '@/components/ExpensesOutput/ExpensesOutput';
+import { useExpenses } from '@/store/expenses-context';
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
 
 const AllExpenses: React.FC = () => {
+  const { expenses } = useExpenses();
+  
   return (
-      <ExpensesOutput periodName={'Total'} />
+      <ExpensesOutput expenses={expenses} periodName={'Total'} />
   );
 };
 

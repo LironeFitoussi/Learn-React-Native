@@ -1,20 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 
 // Components
+import { ExpensesListProps } from '@/types';
 import ExpenseItem from './ExpenseItem';
-
-
-type Expense = {
-    id: string;
-    description: string;
-    amount: number;
-    date: Date;
-};
-
-type ExpensesListProps = {
-    expenses: Expense[];
-};
 
 const renderExpenseItem = (itemData: any) => {
     return (

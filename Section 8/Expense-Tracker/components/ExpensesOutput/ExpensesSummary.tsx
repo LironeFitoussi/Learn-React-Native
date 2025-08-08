@@ -1,11 +1,7 @@
 import { GlobalStyles } from '@/constants/styles';
+import { ExpensesSummaryProps } from '@/types';
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-
-type ExpensesSummaryProps = {
-  periodName: string;
-  expenses: any[];
-};
+import { StyleSheet, Text, View } from 'react-native';
 
 const ExpensesSummary: React.FC<ExpensesSummaryProps> = ({ periodName = 'Last 7 days', expenses }) => {
  
