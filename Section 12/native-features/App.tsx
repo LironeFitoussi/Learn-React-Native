@@ -7,9 +7,11 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AllPlaces from "./screens/AllPlaces";
 import AddPlace from "./screens/AddPlace";
 import PlaceDetails from "./screens/PlaceDetails";
+import Map from "./screens/Map";
 
 // Constants
 import { Colors } from "./constants/colors";
+import { AppRegistry } from "react-native";
 
 const Stack = createNativeStackNavigator();
 
@@ -43,9 +45,14 @@ export default function App() {
               title: "Add New Place",
             }}
           />
-          <Stack.Screen name="PlaceDetails" component={PlaceDetails} />
+          {/* <Stack.Screen name="PlaceDetails" component={PlaceDetails} /> */}
+          <Stack.Screen name="Map" component={Map} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
   );
 }
+
+
+// Register the app entry point
+AppRegistry.registerComponent("native-features", () => App);
