@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
-import OutlinedButton from "../ui/OutlinedButton";
-import { Colors } from "../../constants/colors";
-import * as Location from "expo-location";
 import { getMapPreview } from "@/util/location";
-import { useNavigation, useRoute, useIsFocused} from "@react-navigation/native";
+import { useIsFocused, useNavigation, useRoute } from "@react-navigation/native";
+import * as Location from "expo-location";
+import { useEffect, useState } from "react";
+import { Image, StyleSheet, Text, View } from "react-native";
+import { Colors } from "../../constants/colors";
+import OutlinedButton from "../ui/OutlinedButton";
 
-export default function LocationPicker() {
+interface LocationPickerProps {
+    onPickLocation: (location: {lat: number, lng: number}) => void;
+}
+
+export default function LocationPicker({onPickLocation}: LocationPickerProps) {
   const [location, setLocation] = useState<Location.LocationObject | null>(
     null
   );
@@ -37,6 +41,12 @@ export default function LocationPicker() {
       });
     }
   }, [route, isFocused]);
+
+  useEffect(() => {
+    if (location) {
+      onPickLocation({lat: location.coords.latitude, lng: location.coords.longitude});
+    }
+  }, [location, onPickLocation]);
 
   const navigation = useNavigation();
   async function getCurrentLocation() {

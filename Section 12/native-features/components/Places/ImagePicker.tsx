@@ -1,14 +1,18 @@
-import { View, Button, Alert, Text, Image, StyleSheet } from "react-native";
 import {
   launchCameraAsync,
-  useCameraPermissions,
   PermissionStatus,
+  useCameraPermissions,
 } from "expo-image-picker";
 import { useState } from "react";
+import { Alert, Image, StyleSheet, Text, View } from "react-native";
 import { Colors } from "../../constants/colors";
 import OutlinedButton from "../ui/OutlinedButton";
 
-export default function ImagePicker() {
+interface ImagePickerProps {
+    onTakeImage: (imageUri: string) => void;
+}
+
+export default function ImagePicker({onTakeImage}: ImagePickerProps) {
     const [pickedImage, setPickedImage] = useState<string | undefined>(undefined);
   const [cameraPermissionInformation, requestPermission] =
     useCameraPermissions();
@@ -43,8 +47,9 @@ export default function ImagePicker() {
     });
 
     if (image.assets?.[0]) {
-      console.log(image.assets[0].uri);
+      // console.log(image.assets[0].uri);
       setPickedImage(image.assets[0].uri);
+      onTakeImage(image.assets[0].uri);
     }
   }
 
